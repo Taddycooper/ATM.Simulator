@@ -24,7 +24,7 @@ namespace ATM.Simulator
         {
             if (!TryParseAmount(DepositAmount.Text, out var amount))
             {
-                MessageBox.Show("Invalid deposit amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Invalid deposit amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -50,13 +50,13 @@ namespace ATM.Simulator
 
             if (amount <= 0)
             {
-                MessageBox.Show("Enter a positive amount to withdraw.", "Invalid amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter a positive amount to withdraw", "Invalid amount", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (amount > _balance)
             {
-                MessageBox.Show("Insufficient funds.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Insufficient funds", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
